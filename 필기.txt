@@ -1,0 +1,165 @@
+개발도구
+- Eclipse + jar
+- STS > Eclipse + jar
+	- Spring > STS 3 > Spring 프로젝트 + Spring Boot 프로젝트
+	- Spring Boot > STS 4 > Spring Boot 프로젝트
+- Spring Legacy > JDK 11 까지 지원
+- Spring Boot 2.X > JDK 11 이상부터 지원
+- Spring Boot 3.X > JDK 17 이상부터 지원
+- Spring Boot 4.X > JDK 17 이상부터 지원
+
+- Spring > JDK 11 + STS 3
+- Spring Boot > JDK 17 + STS 4
+- VS Code, ItelliJ + JDK 버전 고려
+
+
+JDK 11 설치
+
+STS 3 설치 > https://spring.io
+
+
+
+
+1. 새폴더
+   - code > "spring"
+
+
+
+
+
+새 프로젝트 
+- New > Spring Legacy Project > Spring MVC Project
+- Project name: "BasicTest"
+- root package: "com.test.java"
+
+
+Spring Legacy Project + Spring MVC Project Template > 프로젝트 구조
+
+메이븐, Maven
+- 프로젝트 관리 도구(이클립스에 포함)
+- 프로젝트 생성 + 관리 + 배포 작업을 도와주는 프로그램
+- 관리 > 의존성 관리 > 프로젝트에 필요한 *.jar 관리
+
+
+
+
+폴더 및 파일 구조
+
+BasicTest > pom.xml(Project Object Model, 메이븐 설정 파일)
+          > 롬복 설정
+           
+main > 개발 소스           
+- src/main/java
+	- *.java 파일들 보관
+- src/main/java > com.test.java 패키지
+- src/main/resources
+	- 자바 이외의 파일들 보관
+test > 테스트용 소스
+- src/test/java
+- src/test/resources
+
+- webapp : 웹 루트 폴더
+
+- webapp > resources : asset 폴더 역할(css,js,image 등)
+
+- webapp > WEB-INF > classes : *.class 저장 폴더(접근X)
+                   
+- webapp > WEB-INF > views : View 폴더(JSP 페이지)
+
+- webapp > WEB-INF > spring : 스프링 설정 폴더(*****)
+
+- webapp > WEB-INF > root-context.xml : 사이트 전역 설정
+
+- webapp > WEB-INF > appServlet > servlet-context.xml : 일부분 설정
+                   
+
+-------------------------------------------------------------------
+
+현재 프로젝트 버전 수정하기
+
+1. 자바 버전 > 11
+	- pom.xml
+	- 프로젝트 > 우측버튼 > Properties > Project facets
+
+2. 스프링 버전 > 5.0.7
+	- pom.xml
+
+-------------------------------------------------------------------
+
+스프링 주요 이론
+1. DI
+1.5 IoC
+2. AOP
+
+
+- src/main/java > "com.test.java.di01"
+						- "Main.java"
+						- "Service.java"
+						- "Hong.java"
+						- "Lee.java"
+
+- src/main/java > "com.test.java.di02"
+						- "Main.java"
+						- "Service.java"
+						- "Hong.java"
+						- "Lee.java"
+						- "Employee.java"(I)
+
+- src/main/java > "com.test.java.di03"
+						- "Main.java"
+						- "Service.java"
+						- "Hong.java"
+						- "Lee.java"
+						- "Employee.java"(I)
+						- "di03.xml" //스프링 설정 파일
+
+
+
+- src/main/java > "com.test.java.aop"
+						- "Main.java"
+						
+						- "Memo.java"(I)
+						- "MemoImpl.java"(C) > 메모 객체 > 주업무
+						
+						- "Logger.java" > 로그 객체 > 보조업무
+						
+						- "memo.xml" > 스프링 설정 파일
+						
+
+
+인터페이스 + 클래스 명명법
+- IUser.java(I)
+	- User.java(C)
+	- Adminstrator.java(C)
+
+- User.java(I)
+	- UserImpl.java(C) > 상속받는 클래스가 1개일 때
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
